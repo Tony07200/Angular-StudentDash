@@ -9,6 +9,8 @@ import { EtudiantListComponent } from './etudiant-list/etudiant-list.component';
 import { DetailsStudentComponent } from './details-student/details-student.component';
 import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
 import {FormsModule} from '@angular/forms';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import {FormsModule} from '@angular/forms';
     TirageAuSortComponent,
     EtudiantListComponent,
     DetailsStudentComponent,
-    AddEtudiantComponent
+    AddEtudiantComponent,
+    StatistiquesComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxEchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

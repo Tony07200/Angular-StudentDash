@@ -1,24 +1,42 @@
 <button class="btn btn-dark" (click)="goBack()"> Back</button>
-<h2 class="mt-5 text-center">Details de l'étudiant  </h2>
+<h2 class="mt-5 text-center">Details de l'étudiant </h2>
 
 <div class="row">
   <div class="col-4"></div>
   <div class="col-4 border bg-white shadow-sm p-4">
-  <div class="row">
+    <div class="row">
       <a class="delete-student" (click)="removeStudent(etudiant.id)">
         <img src="../../assets/img/delete.png" alt="Supprimer Etudiant">
       </a>
-    <div class="col-12 text-center">
-      <img src="{{ etudiant.img }}" style="width:80px; height:80px;">
-    </div>
-    <div class="col-12 text-center mt-2 bg-info pt-3">
-      <p class="text-white">{{ etudiant.name | uppercase }} {{ etudiant.firstname | uppercase }}</p>
-    </div>
-    <div class="col-12 text-center bg-light p-1 mt-2">
-      <p>  Date d'anniversaire : {{ etudiant.birthdate }}</p>
+      <div class="col-12 text-center">
+        <img src="{{ etudiant.img }}" style="width:80px; height:80px;">
+      </div>
+      <div class="col-12 text-center mt-2 bg-info pt-3">
+        <p class="text-white">{{ etudiant.name | uppercase }} {{ etudiant.firstname | uppercase }}</p>
+      </div>
+      <div class="col-12 text-center bg-light p-1 mt-2">
+        <p> Date d'anniversaire : {{ etudiant.birthdate }} </p>
+      </div>
     </div>
   </div>
+
+  <div class="col-12 mt-4">
+    <h2 class="text-center mt-4">Note de l'etudiant / Matiere(s)</h2>
+    <div class="row justify-content-center mt-3">
+      <div *ngFor="let mat of etudiant.matieres" class="col-1 ml-1 shadow text-center">
+        <div class="row">
+          <div class="col-12 p-2 bg-info">
+            <span class="text-white">{{mat.title}}</span>
+          </div>
+        </div>
+        <p *ngFor="let note of mat.notes" class="mt-1 p-2 text-center ">
+          <span class="bg-light">{{note}} / 20</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-12 text-center mt-5">
+      <a routerLink="/statistiques/{{etudiant.id}}" class="btn btn-success shadow text-white"> Voir statistiques</a>
+    </div>
   </div>
   <div class="col-4"></div>
 </div>
-
