@@ -1,0 +1,33 @@
+<h2>Tirage au sort pour groupe</h2>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <button class="col-md-3 btn btn-success" (click)="sortGroup2()">Tirage groupe de <b>2</b></button>
+    <button class="col-md-3 btn btn-success" (click)="sortGroup3()">Tirage groupe de <b>3</b></button>
+    <button class="col-md-3 btn btn-success" (click)="sortGroup4()">Tirage groupe de <b>4</b></button>
+  </div>
+  <div class="col-2"></div>
+</div>
+<hr>
+
+
+<h3 *ngIf="response.length">Resultat du tirage au sort : Groupe de 2</h3>
+<div class="row">
+  <div *ngFor="let rep of response" class="col-5 border border-success p-4 m-2">
+    <p class="text-center">{{ rep.name}} {{rep.firstname}} </p>
+  </div>
+</div>
+
+<h3 *ngIf="response2.length" class="mt-3">Resultat du tirage au sort : Groupe de 3</h3>
+<div class="row">
+  <div *ngFor="let rep of response2" class="col-3 border border-success p-4 m-2">
+    <p class="text-center">{{ rep.name}} {{rep.firstname}} </p>
+  </div>
+</div>
+
+<h3 *ngIf="response3.length" class="mt-3">Resultat du tirage au sort : Groupe de 4</h3>
+<div class="row">
+  <div *ngFor="let rep of response3" class="col-sm-2 border border-success p-5 ml-5 mr-5 mt-2">
+    <p class="text-center">{{ rep.name}} {{rep.firstname}} </p>
+  </div>
+</div>

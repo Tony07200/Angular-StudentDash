@@ -1,0 +1,19 @@
+<div class="row">
+  <h2 class="col-10">Liste des etudiants</h2>
+  <a routerLink="/addetudiants" class="btn btn-info col-2">Ajouter un étudiant</a>
+</div>
+<div class="row mt-5">
+  <div *ngFor="let student of etudiants" class="col-md-3 offset-md-4 shadow-sm student-box">
+    <a routerLink="/details/{{ student.id }}">
+      <div class="row">
+        <div class="img-student col-sm-6 text-right">
+          <img src="{{ student.img}}" alt="Image de profil">
+        </div>
+        <div class="info-student col-sm-6 mt-3">
+          <p>{{ student.name }} {{ student.firstname }}</p>
+        </div>
+      </div>
+
+    </a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.student-box{
+  border:1px solid #e5e5e5;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+}
+
+.img-student{
+  padding: 10px;
+}
+
+.info-student{
+  padding: 15px 4px;
+}
+

@@ -1,0 +1,8 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.delete-student{
+  position: absolute;
+  top:-15px;
+  left:-10px;
+  cursor: pointer;
+}

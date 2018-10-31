@@ -1,0 +1,24 @@
+<button class="btn btn-dark" (click)="goBack()"> Back</button>
+<h2 class="mt-5 text-center">Details de l'étudiant  </h2>
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4 border bg-white shadow-sm p-4">
+  <div class="row">
+      <a class="delete-student" (click)="removeStudent(etudiant.id)">
+        <img src="../../assets/img/delete.png" alt="Supprimer Etudiant">
+      </a>
+    <div class="col-12 text-center">
+      <img src="{{ etudiant.img }}" style="width:80px; height:80px;">
+    </div>
+    <div class="col-12 text-center mt-2 bg-info pt-3">
+      <p class="text-white">{{ etudiant.name | uppercase }} {{ etudiant.firstname | uppercase }}</p>
+    </div>
+    <div class="col-12 text-center bg-light p-1 mt-2">
+      <p>  Date d'anniversaire : {{ etudiant.birthdate }}</p>
+    </div>
+  </div>
+  </div>
+  <div class="col-4"></div>
+</div>
+
