@@ -1,14 +1,15 @@
 <h2>Tirage au sort pour groupe</h2>
+<hr>
 <div class="row">
   <div class="col-2"></div>
   <div class="col-8">
-    <button class="col-md-3 btn btn-success" (click)="sortGroup2()">Tirage groupe de <b>2</b></button>
-    <button class="col-md-3 btn btn-success" (click)="sortGroup3()">Tirage groupe de <b>3</b></button>
-    <button class="col-md-3 btn btn-success" (click)="sortGroup4()">Tirage groupe de <b>4</b></button>
+    <button class="col-md-3 btn btn-success shadow" (click)="sortGroup2()"><img src="../../assets/img/random.png">Groupe de <b>2</b></button>
+    <button class="col-md-3 btn btn-success shadow" (click)="sortGroup3()"><img src="../../assets/img/random.png">Groupe de <b>3</b></button>
+    <button class="col-md-3 btn btn-success shadow" (click)="sortGroup4()"><img src="../../assets/img/random.png">Groupe de <b>4</b></button>
   </div>
   <div class="col-2"></div>
 </div>
-<hr>
+
 
 
 <h3 *ngIf="response.length">Resultat du tirage au sort : Groupe de 2</h3>

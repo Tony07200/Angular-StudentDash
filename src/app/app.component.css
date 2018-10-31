@@ -3,7 +3,8 @@
 
 header{
   height:60px;
-  background-color: #fff;
+  background-color: #000;
+  color:#fff;
 }
 
 .navigate{
@@ -33,7 +34,7 @@ header{
 
 h1{
   font-family: cursive;
-  color: #000;
+  color: #fff;
   font-size: 1.4em;
   padding: 15px;
 }
