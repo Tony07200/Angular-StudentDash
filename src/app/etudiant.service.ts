@@ -207,7 +207,7 @@ export class EtudiantService {
       matieres: [{
         title: 'PHP',
         notes: [10, 20, 15]
-      },{
+      }, {
         title: 'JAVASCRIPT',
         notes: [1, 16, 13]
       },{

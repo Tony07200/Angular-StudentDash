@@ -21,13 +21,15 @@ export class AddEtudiantComponent  {
     const name = this.data.name;
     const firstname = this.data.firstname;
     const birthdate = this.data.birthdate;
+    const matieres =  [];
 
     const Student = new Etudiant(
       id,
       img,
       name,
       firstname,
-      birthdate
+      birthdate,
+      matieres
     );
 
     this.etudiantsService.addStudent(Student);
